@@ -57,6 +57,10 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'Tango_excercises.urls'
 
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
