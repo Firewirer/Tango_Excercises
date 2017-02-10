@@ -42,6 +42,7 @@ def add_category(request):
     return render(request,'rango/add_category.html',{'form':form})
 
 
+
 def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
@@ -63,7 +64,6 @@ def add_page(request, category_name_slug):
 
     context_dict = {'form':form, 'category': category}
     return render(request, 'rango/add_page.html', context_dict)
-
 
 def index(request):
     category_list = Category.objects.order_by('-likes')[:5]
